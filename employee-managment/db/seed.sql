@@ -1,7 +1,7 @@
 USE employees;
 
 INSERT INTO department
-    (name)
+   (name)
 VALUES
     ('Sales'),
     ('Engineering'),
