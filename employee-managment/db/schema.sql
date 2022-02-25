@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS employees;
 CREATE DATABASE employees;
 
-
+USE employees;
 
 CREATE TABLE department (
   id INT  PRIMARY KEY,
