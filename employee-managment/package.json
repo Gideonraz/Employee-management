@@ -1,0 +1,34 @@
+{
+  "name": "Employee-Management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "watch": "nodemon ./db/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gideonraz/Employee-management"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gideonraz/Employee-management/issues"
+  },
+  "homepage": "https://github.com/Gideonraz/Employee-management#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^5.3.5",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1",
+    "node": "^17.4.0",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
