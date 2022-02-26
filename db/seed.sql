@@ -1,24 +1,24 @@
-USE employees;
+USE employee_db;
 
 INSERT INTO department
-   (name)
+   (name, id)
 VALUES
-    ('Sales'),
-    ('Engineering'),
-    ('Finance'),
-    ('Legal');
+    ('Sales' ,1 ),
+    ('Engineering', 2),
+    ('Finance', 3),
+    ('Legal', 4);
 
 INSERT INTO role
-    (title, salary, department_id)
+    (title, salary, department)
 VALUES
     ('Sales Lead', 100000, 1),
-    ('Salesperson', 80000, 1),
+    ('Salesperson', 80000, 5),
     ('Lead Engineer', 150000, 2),
-    ('Software Engineer', 120000, 2),
+    ('Software Engineer', 120000, 4),
     ('Account Manager', 160000, 3),
-    ('Accountant', 125000, 3),
+    ('Accountant', 125000, 6),
     ('Legal Team Lead', 250000, 4),
-    ('Lawyer', 190000, 4);
+    ('Lawyer', 190000, 7);
 
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)

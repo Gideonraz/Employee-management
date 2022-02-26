@@ -1,8 +1,4 @@
-DROP DATABASE IF EXISTS employees;
-CREATE DATABASE employees;
-
-USE employees;
-
+USE employee_db;
 CREATE TABLE department (
   id INT  PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL

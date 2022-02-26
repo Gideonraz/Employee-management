@@ -1,7 +1,7 @@
 {
-  "name": "Employee-Management",
+  "name": "employee-management",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gideonraz/Employee-management"
+    "url": "git+https://github.com/Gideonraz/Employee-management.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gideon Razzaq",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gideonraz/Employee-management/contact"
