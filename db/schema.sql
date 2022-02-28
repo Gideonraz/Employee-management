@@ -1,33 +1,30 @@
+DROP DATABASE IF EXISTS employee_db;
+CREATE DATABASE employee_db;
+
 USE employee_db;
 
-INSERT INTO department
-   (name, id)
-VALUES
-    ('Sales' ,1 ),
-    ('Engineering', 2),
-    ('Finance', 3),
-    ('Legal', 4);
+CREATE TABLE departments(
+ id INT,
+ name VARCHAR(30),
+ PRIMARY KEY(id)
+);
 
-INSERT INTO role
-    (title, salary, department)
-VALUES
-    ('Sales Lead', 100000, 1),
-    ('Salesperson', 80000, 5),
-    ('Lead Engineer', 150000, 2),
-    ('Software Engineer', 120000, 4),
-    ('Account Manager', 160000, 3),
-    ('Accountant', 125000, 6),
-    ('Legal Team Lead', 250000, 4),
-    ('Lawyer', 190000, 7);
+CREATE TABLE role(
+id INT,
+title VARCHAR(30),
+salary DECIMAL,
+department_id INT, 
+PRIMARY KEY(id),
+FOREIGN KEY(department_id)
+REFERENCES departments(id)
+);
 
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ('Samantha', 'Johnson', 1, 1),
-    ('Ronald', 'Perkins', 2, 1),
-    ('Ann', 'Swanson', 3 , 2),
-    ('Amy', 'O''Dwyer', 4, 3),
-    ('Chris', 'Evans', 5, 3),
-    ('Ben', 'Thomas', 6, 5),
-    ('Jacob', 'Hartford', 7, 4),
-    ('Vlad', 'Bubo', 8, 7);
+CREATE TABLE employee(
+id INT,
+first_name VARCHAR(30),
+last_name VARCHAR(30),
+role_id INT,
+manager_id INT,
+FOREIGN KEY(role_id)
+REFERENCES role(id)
+);

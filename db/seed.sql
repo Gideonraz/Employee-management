@@ -1,33 +1,27 @@
 USE employee_db;
 
+
+-- inserts data into department table
 INSERT INTO department
-   (name, id)
+    (name)
 VALUES
-    ('Sales' ,1 ),
-    ('Engineering', 2),
-    ('Finance', 3),
-    ('Legal', 4);
+    ('Development'), ('Quality Assurance'), ('Human Resources'), ('Operations');
 
+
+-- inserst data into role table
 INSERT INTO role
-    (title, salary, department)
+    (title, salary, department_id)
 VALUES
-    ('Sales Lead', 100000, 1),
-    ('Salesperson', 80000, 5),
-    ('Lead Engineer', 150000, 2),
-    ('Software Engineer', 120000, 4),
-    ('Account Manager', 160000, 3),
-    ('Accountant', 125000, 6),
-    ('Legal Team Lead', 250000, 4),
-    ('Lawyer', 190000, 7);
+    ('Development Lead', 150000, 1), ('Developer', 100000, 1),
+    ('Lead Test Engineer', 150000, 2), ('Test Engineer', 100000, 2),
+    ('HR Manager', 110000, 3), ('HR Representive', 80000, 3),
+    ('Operations Lead', 140000, 4), ('Operations Engineer', 90000, 4);
 
+
+-- insert data into employee table
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ('Samantha', 'Johnson', 1, 1),
-    ('Ronald', 'Perkins', 2, 1),
-    ('Ann', 'Swanson', 3 , 2),
-    ('Amy', 'O''Dwyer', 4, 3),
-    ('Chris', 'Evans', 5, 3),
-    ('Ben', 'Thomas', 6, 5),
-    ('Jacob', 'Hartford', 7, 4),
-    ('Vlad', 'Bubo', 8, 7);
+    ('Larry', 'Lee', 1, NULL), ('Dan', 'DeButts', 2, 1), ('John', 'McCruch', 3, NULL),
+    ('Brian', 'Elliish', 4, 3), ('Brad', 'March', 5, NULL), ('Patrice', 'Berg', 6, 5),
+    ('David', 'Kraj', 7, NULL), ('Jake', 'Debrus', 8, 7);
